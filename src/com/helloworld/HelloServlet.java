@@ -59,6 +59,9 @@ public class HelloServlet extends HttpServlet {
 		req.setAttribute("user", user);
 
 		ArrayList<Integer> list = new ArrayList<>();
+		list.add(3);
+		list.add(5);
+		list.add(7);
 		list.add(2);
 		list.add(4);
 		list.add(10);
