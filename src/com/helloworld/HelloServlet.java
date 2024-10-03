@@ -71,8 +71,5 @@ public class HelloServlet extends HttpServlet {
 		RequestDispatcher dispactcher = req.getRequestDispatcher("Hello.jsp");
 		dispactcher.forward(req, resp);
 
-		dispactcher.forward(req, resp);
-		dispactcher.forward(req, resp);
-
 	}
 }
