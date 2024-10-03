@@ -59,6 +59,9 @@ public class HelloServlet extends HttpServlet {
 		req.setAttribute("user", user);
 
 		ArrayList<Integer> list = new ArrayList<>();
+		list.add(3);
+		list.add(5);
+		list.add(7);
 		list.add(6);
 		list.add(9);
 		list.add(10);
@@ -66,6 +69,9 @@ public class HelloServlet extends HttpServlet {
 		req.setAttribute("collection", list);
 
 		RequestDispatcher dispactcher = req.getRequestDispatcher("Hello.jsp");
+		dispactcher.forward(req, resp);
+
+		dispactcher.forward(req, resp);
 		dispactcher.forward(req, resp);
 
 	}
