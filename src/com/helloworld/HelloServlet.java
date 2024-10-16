@@ -1,8 +1,6 @@
 package com.helloworld;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,17 +15,20 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
 
-		PrintWriter out = resp.getWriter();
+//		PrintWriter out = resp.getWriter();
+//
+//		out.println("<form action='/servlet1' method='post'>");
+//		out.println("	<label for='username'>Username</label><br>");
+//		out.println("	<input type='text' name='username'><br>");
+//		out.println("	<label for='password'>Password</label><br>");
+//		out.println("	<input type='password' name='password'><br>");
+//		out.println("	<input type='submit' value='Login'><br>");
+//		out.println("</form>");
+//
+//		out.close();
 
-		out.println("<form action='/servlet1' method='post'>");
-		out.println("	<label for='username'>Username</label><br>");
-		out.println("	<input type='text' name='username'><br>");
-		out.println("	<label for='password'>Password</label><br>");
-		out.println("	<input type='password' name='password'><br>");
-		out.println("	<input type='submit' value='Login'><br>");
-		out.println("</form>");
-
-		out.close();
+		RequestDispatcher dispactcher = req.getRequestDispatcher("Hello.jsp");
+		dispactcher.forward(req, resp);
 
 	}
 
@@ -58,17 +59,17 @@ public class HelloServlet extends HttpServlet {
 
 		req.setAttribute("user", user);
 
-		ArrayList<Integer> list = new ArrayList<>();
-		list.add(3);
-		list.add(5);
-		list.add(7);
-		list.add(6);
-		list.add(9);
-		list.add(10);
+//		ArrayList<Integer> list = new ArrayList<>();
+//		list.add(3);
+//		list.add(5);
+//		list.add(7);
+//		list.add(6);
+//		list.add(9);
+//		list.add(10);
+//
+//		req.setAttribute("collection", list);
 
-		req.setAttribute("collection", list);
-
-		RequestDispatcher dispactcher = req.getRequestDispatcher("Hello.jsp");
+		RequestDispatcher dispactcher = req.getRequestDispatcher("Test.jsp");
 		dispactcher.forward(req, resp);
 
 	}

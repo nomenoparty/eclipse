@@ -8,12 +8,23 @@
 </head>
 <body>
 
+<%-- 
+	<%! int a = 2; %>
+	
+	<% int b = 4; %>
+
 	<h1>Username : ${user.name }</h1>
 	<h2>Password: ${user.password }</h2>
 	
-	<c:forEach var="item" items = "${collection}" >
-		<p>${item}</p>
-	</c:forEach >
 	
+	--%>
+	
+	<form action='/servlet1' method='post'>
+		<label for='username'>Username</label><br>
+		<input type='text' name='username'><br>
+		<label for='password'>Password</label><br>
+		<input type='password' name='password'><br>
+		<input type='submit' value='Login'><br>
+	</form>
 </body>
 </html>

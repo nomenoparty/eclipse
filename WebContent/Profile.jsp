@@ -11,4 +11,7 @@
 	<% int id =  Integer.valueOf(request.getParameter("id")); %>
 	<p>Id của bạn là : <%=id %></p>
 </body>
+
+
+
 </html>
